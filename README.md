@@ -3,6 +3,8 @@ A Codeigniter library for using [Mandrill's](http://mandrill.com/) super-fine [A
 
 See Mandrill's [help docs](http://help.mandrill.com/home).
 
+I use this library with [Mailman](https://github.com/fideloper/Mailman).
+
 # Install
 Add the `config/mandrill.php` file into your `application/config` directory. Optionally add that config to `config/autoload.php` so you do not need to do so manually.
 
