@@ -33,7 +33,7 @@ if( $mandrill_ready ) {
 
 	//Send us some email!
 	$email = array(
-		'html' => '<p>This is my message<p>, //Consider using a view file
+		'html' => '<p>This is my message<p>', //Consider using a view file
 		'text' => 'This is my plaintext message',
 		'subject' => 'This is my subject',
 		'from_email' => 'me@ohmy.com',
