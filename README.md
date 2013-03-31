@@ -41,6 +41,7 @@ if( $mandrill_ready ) {
 		'from_email' => 'me@ohmy.com',
 		'from_name' => 'Me-Oh-My',
 		'to' => array(array('email' => 'joe@example.com' )) //Check documentation for more details on this one
+		//'to' => array(array('email' => 'joe@example.com' ),array('email' => 'joe2@example.com' )) //for multiple emails
 		);
 
 	$result = $this->mandrill->messages_send($email);
