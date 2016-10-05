@@ -430,6 +430,8 @@ class Mandrill {
 
         if( function_exists('curl_init') && function_exists('curl_exec') ) {
         
+	    $maxExecutionTime = ini_get('max_execution_time');
+		
             if( !ini_get('safe_mode') ){
                 set_time_limit(2 * 60);
             }
@@ -451,6 +453,9 @@ class Mandrill {
                 $error      = curl_error($ch);
                 
             curl_close($ch);
+	    if( !ini_get('safe_mode') ){
+	        set_time_limit($maxExecutionTime);
+	    }
             
         } elseif( function_exists( 'fsockopen' ) ) {
 	        $parsed_url = parse_url($url);
